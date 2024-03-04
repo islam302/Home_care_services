@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load socialaccount %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .google-login {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+            background-image: url('data:image/png;base64,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');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 50px;
+        }
+        .google-login:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .facebook-login {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #fff;
+            background-color: #3b5998;
+            border: 1px solid #3b5998;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 50px;
+        }
+        .facebook-login:hover {
+            background-color: #2d4373;
+            border-color: #2d4373;
+        }
+        .gmail-login {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #fff;
+            background-color: #d93025;
+            border: 1px solid #d93025;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+            background-image: url('data:image/svg+xml;base64,YOUR_BASE64_ENCODED_IMAGE_HERE');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 50px;
+        }
+        .gmail-login:hover {
+            background-color: #b82520;
+            border-color: #b82520;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OAuth Login</h1>
+        {% if user.is_authenticated %}
+        <p>Welcome. You are logged in as {{user.username}}.</p>
+        {% else %}
+        <a href="{% provider_login_url 'google' %}" class="google-login">Login with Google</a>
+        <a href="{% provider_login_url 'facebook' %}" class="facebook-login">Login with Facebook</a>
+        {% endif %}
+    </div>
+    {% providers_media_js %}
+</body>
+</html>

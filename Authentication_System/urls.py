@@ -1,12 +1,25 @@
-from django.contrib import admin
 from django.urls import path, include
-from . import views
+from django.contrib.auth.views import LogoutView
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('', include('djoser.urls')),
-    path('', include('djoser.urls.authtoken')),
-    path('', include('djoser.urls.jwt')),
-    # path('accounts/', include('allauth.urls')),
-    # path('dj-rest-auth/', include('dj_rest_auth.urls')),
-    # path('dj-rest-auth/facebook/', views.FacebookLogin.as_view(), name='fb_login'),]
+    # URL pattern for the index page
+    path('', TemplateView.as_view(template_name='index.html'), name='index'),
+
+    # API endpoints for authentication using Djoser
+    path('api/', include('djoser.urls')),
+    path('api/', include('djoser.urls.authtoken')),
+    path('api/', include('djoser.urls.jwt')),
+
+    # URL pattern for allauth
+    path('auth/', include('allauth.urls')),
+
+    # URL pattern for logging out
+    path('logout/', LogoutView.as_view(), name='logout'),
+
+    # URL pattern for Google authentication
+    path('accounts/google/', include('allauth.socialaccount.urls')),
+
+    # URL pattern for Facebook authentication
+    path('accounts/facebook/', include('allauth.socialaccount.urls')),
 ]

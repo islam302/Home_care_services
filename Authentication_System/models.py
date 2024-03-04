@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-# from .managers import UserManager
+from .managers import UserManager
 
 
 class UserModel(AbstractUser):
@@ -16,6 +16,6 @@ class UserModel(AbstractUser):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name='gender')
     phone_number = models.CharField(max_length=15, unique=True)
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'email', 'gender']
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'email', 'gender', 'phone_number']
 
-    # objects = UserManager()
+    objects = UserManager()
