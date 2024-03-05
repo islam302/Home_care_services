@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .vercel
 *.log
 *.pyc
@@ -13,3 +14,6 @@ venv/
 ENV/ 
 env.bak/ 
 venv.bak/ 
+=======
+env/
+>>>>>>> 05164f650db4f2cdf19ab5c27efadd7118f6d4de
