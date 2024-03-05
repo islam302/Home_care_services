@@ -14,12 +14,12 @@ class Employee(models.Model):
 
 class Services(models.Model):
     SERVICE_TYPE_CHOICES = [
-        ('quick_services', 'Quick Services'),
-        ('elderly_care', 'Elderly Care'),
-        ('clinical_care', 'Clinical Care'),
-        ('disabled_care', 'Disabled Care'),
-        ('child_care', 'Child Care'),
-        ('wound_care', 'Wound Care'),
+        ('quick_services', 'حالات طارئة'),
+        ('elderly_care', 'رعاية الاطفال'),
+        ('clinical_care', 'الرعاية السريرية'),
+        ('disabled_care', 'رعاية المعاقين'),
+        ('child_care', 'رعاية الطفل'),
+        ('wound_care', 'رعاية المصابين'),
     ]
 
     service_name = models.CharField(max_length=20, choices=SERVICE_TYPE_CHOICES)
@@ -27,10 +27,17 @@ class Services(models.Model):
 
 class Client(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='client')
-    client_photo = models.ImageField(upload_to='client_photos/')
-    national_id = models.ImageField(upload_to='clients_national_id_photos/')
+    client_photo = models.ImageField(upload_to='client_photos/', null=True, blank=True)
+    national_id = models.ImageField(upload_to='clients_national_id_photos/', null=True, blank=True)
     current_location = models.CharField(max_length=255)
     service_needed = models.ForeignKey(Services, on_delete=models.PROTECT, related_name='service_needed')
+
+    def __init__(self, *args, **kwargs):
+        super(Client, self).__init__(*args, **kwargs)
+        self._meta.get_field('service_needed').choices = self.get_service_choices()
+
+    def get_service_choices(self):
+        return [(service.id, service.service_name) for service in Services.objects.all()]
 
 
 class ContactUs(models.Model):
@@ -55,3 +62,8 @@ class Jobs(models.Model):
 class JobSeekers(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='job_seekers')
     job_title = models.CharField(max_length=250)
+
+
+class CustomerReviews(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user')
+    review = models.TextField()

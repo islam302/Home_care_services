@@ -1,4 +1,4 @@
-from .models import Employee, Client, ContactUs
+from .models import Employee, Client, ContactUs, Services, CustomerReviews
 from rest_framework import serializers
 
 
@@ -17,4 +17,16 @@ class ClientSerializer(serializers.ModelSerializer):
 class ContactUsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactUs
+        fields = '__all__'
+
+
+class ServicesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Services
+        fields = '__all__'
+
+
+class CustomReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomerReviews
         fields = '__all__'
