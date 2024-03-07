@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Employee, ContactUs, Client, Services, CustomerReviews
-from .serializers import EmployeeSerializer,CustomReviewSerializer, ClientSerializer, ContactUsSerializer, ServicesSerializer
+from .serializers import EmployeeSerializer, CustomReviewSerializer, ClientSerializer, ContactUsSerializer, ServicesSerializer
 from rest_framework.decorators import action
 
 
