@@ -30,13 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'nurse-ws7j.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'home-care-services.onrender.com']
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^pnd7&$mb58mlxww)q-6*4^7+=+cgn$f1oe+=iwl(6(_j-=2bi')
-
-
-
-
 
 
 
