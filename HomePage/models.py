@@ -67,3 +67,4 @@ class JobSeekers(models.Model):
 class CustomerReviews(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user')
     review = models.TextField()
+
