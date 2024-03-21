@@ -152,12 +152,8 @@ WSGI_APPLICATION = 'The_Nurse.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Home_Care_Services',
-        'USER': 'postgres',
-        'PASSWORD': 'civil hacker',
-        'HOST': '127.0.0.1',
-        'PORT': '7070',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
