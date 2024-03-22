@@ -1,110 +1,62 @@
-<<<<<<< HEAD
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fdjango&demo-title=Django%20%2B%20Vercel&demo-description=Use%20Django%204%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fdjango-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994241/random/django.png)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Care Nurse Services</title>
+  <style>
+    /* Optional styling for a more polished look */
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #2E86C1;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .fa-heart {
+      color: #FF0000; /* Red heart icon for a touch of care */
+    }
+  </style>
+</head>
+<body>
+  <h1><i class="fas fa-heart"></i> Home Care Nurse Services <i class="fas fa-heart"></i></h1>
 
-# Django + Vercel
+  <img src="https://placehold.it/400x200?text=Project%20Screenshot" alt="Project Screenshot" />
+  <h2>Providing Quality Care in the Comfort of Home</h2>
+  <p>
+    This project offers a comprehensive solution for connecting individuals with qualified home care nurses. It streamlines the process of finding the right caregiver for your specific needs, ensuring peace of mind and exceptional care.
+  </p>
 
-This example shows how to use Django 4 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+  <h2>Key Features</h2>
+  <ul>
+    <li>**Patient Matching:** A sophisticated algorithm matches patients with suitable nurses based on medical requirements, location, and caregiver preferences.</li>
+    <li>**Detailed Nurse Profiles:** View comprehensive profiles of available nurses, including qualifications, experience, and patient reviews.</li>
+    <li>**Secure Communication:** Communicate seamlessly with nurses through an integrated messaging system within the platform.</li>
+    <li>**Flexible Scheduling:** Easily manage appointments and customize care schedules according to individual needs.</li>
+    <li>**Transparent Billing:** Access clear and transparent billing information directly through the platform.</li>
+    <li>**Progress Tracking:** Monitor patient progress and treatment updates with convenient reporting features.</li>
+    <li>**Reviews and Ratings:** Provide feedback on nursing services to ensure quality and continuous improvement.</li>
+  </ul>
 
-## Demo
+  <h2>Getting Started</h2>
 
-https://django-template.vercel.app/
+  <p>Detailed instructions on using the Home Care Nurse Services platform will be added soon. Stay tuned!</p>
 
-## How it Works
+  <h2>Contributing</h2>
 
-Our Django application, `example` is configured as an installed application in `vercel_app/settings.py`:
+  <p>We welcome contributions from the community! If you're interested in helping to develop this project, please refer to the CONTRIBUTING.md file for guidelines.</p>
 
-```python
-# vercel_app/settings.py
-INSTALLED_APPS = [
-    # ...
-    'example',
-]
-```
-
-We allow "\*.vercel.app" subdomains in `ALLOWED_HOSTS`, in addition to 127.0.0.1:
-
-```python
-# vercel_app/settings.py
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
-```
-
-The `wsgi` module must use a public variable named `app` to expose the WSGI application:
-
-```python
-# vercel_app/wsgi.py
-app = get_wsgi_application()
-```
-
-The corresponding `WSGI_APPLICATION` setting is configured to use the `app` variable from the `vercel_app.wsgi` module:
-
-```python
-# vercel_app/settings.py
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
-```
-
-There is a single view which renders the current time in `example/views.py`:
-
-```python
-# example/views.py
-from datetime import datetime
-
-from django.http import HttpResponse
-
-
-def index(request):
-    now = datetime.now()
-    html = f'''
-    <html>
-        <body>
-            <h1>Hello from Vercel!</h1>
-            <p>The current time is { now }.</p>
-        </body>
-    </html>
-    '''
-    return HttpResponse(html)
-```
-
-This view is exposed a URL through `example/urls.py`:
-
-```python
-# example/urls.py
-from django.urls import path
-
-from example.views import index
-
-
-urlpatterns = [
-    path('', index),
-]
-```
-
-Finally, it's made accessible to the Django server inside `vercel_app/urls.py`:
-
-```python
-# vercel_app/urls.py
-from django.urls import path, include
-
-urlpatterns = [
-    ...
-    path('', include('example.urls')),
-]
-```
-
-This example uses the Web Server Gateway Interface (WSGI) with Django to enable handling requests on Vercel with Serverless Functions.
-
-## Running Locally
-
-```bash
-python manage.py runserver
-```
-
-Your Django application is now available at `http://localhost:8000`.
-
-## One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fdjango&demo-title=Django%20%2B%20Vercel&demo-description=Use%20Django%204%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fdjango-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994241/random/django.png)
-=======
-# Home_care_services
->>>>>>> 05164f650db4f2cdf19ab5c27efadd7118f6d4de
+</body>
+</html>
