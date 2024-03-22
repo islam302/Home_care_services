@@ -35,7 +35,6 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'home-care-services.onrender.com']
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^pnd7&$mb58mlxww)q-6*4^7+=+cgn$f1oe+=iwl(6(_j-=2bi')
 
 
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
