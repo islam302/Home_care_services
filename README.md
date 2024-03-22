@@ -22,6 +22,3 @@
 <h2 align="center">Get Started Today!</h2>
 <p align="center">(Instructions on how to use your project or link to a getting started guide)</p>
 
-<!-- Contributing Section -->
-<h2 align="center">Contributing</h2>
-<p align="center">We welcome contributions from the community! (Link to CONTRIBUTING.md or details on how to contribute)</p>
