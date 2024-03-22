@@ -1,14 +1,9 @@
 <!-- Project Title -->
-<h1 align="center">Empower Your Health at Home: Home Care Nurse Services 🩺</h1>
+<h1>Empower Your Health at Home: Home Care Nurse Services 🩺</h1>
+
+<img src="https://readme-typing-svg.demolab.com/?lines=Never settle for anything less than exceptional care+%F0%9F%8F%AA" alt="Typing SVG">
 
 ![Home Nursing Service](https://drmoamenada.com/wp-content/uploads/2022/01/Home-Nursing-Service-Dr.-Moamen-Nada.jpg)
-
-
-<!-- Project Description -->
-<p align="center"><strong>Never settle for anything less than exceptional care.</strong> Home Care Nurse Services seamlessly connects you with qualified nurses, providing comfort, peace of mind, and personalized care in the familiar setting of your home.</p>
-
-<!-- Key Features Section -->
-<h2 align="center">🩺 Key Features</h2>
 <ul>
   <li>‍⚕️ <strong>Patient Matching:</strong> Find the perfect fit! We match you with nurses based on your needs, location, and preferences.</li>
   <li>️ <strong>Detailed Profiles:</strong> Get to know your caregiver. View nurse qualifications, experience, and patient reviews.</li>
