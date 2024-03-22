@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Care Nurse Services</title>
   <style>
-    /* Optional styling for a more polished look */
     body {
       font-family: sans-serif;
       margin: 2rem;
@@ -26,7 +25,7 @@
       margin-bottom: 0.5rem;
     }
     .fa-heart {
-      color: #FF0000; /* Red heart icon for a touch of care */
+      color: #FF0000;
     }
   </style>
 </head>
