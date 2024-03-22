@@ -1,12 +1,8 @@
 <!-- Project Title -->
 <h1 align="center">Empower Your Health at Home: Home Care Nurse Services 🩺</h1>
 
-<!-- Animated badge -->
-<p align="center">
-  <a href="https://github.com/your-username/your-project-name">
-    <img src="https://raw.githubusercontent.com/animated-shields/animated-shields/master/badge.svg?label=Home%20Care%20Nurse%20Services&style=social" alt="Animated badge">
-  </a>
-</p>
+![Home Nursing Service](https://drmoamenada.com/wp-content/uploads/2022/01/Home-Nursing-Service-Dr.-Moamen-Nada.jpg)
+
 
 <!-- Project Description -->
 <p align="center"><strong>Never settle for anything less than exceptional care.</strong> Home Care Nurse Services seamlessly connects you with qualified nurses, providing comfort, peace of mind, and personalized care in the familiar setting of your home.</p>
